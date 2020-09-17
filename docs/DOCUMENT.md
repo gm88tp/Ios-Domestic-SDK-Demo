@@ -5,6 +5,10 @@
 本文档适用于IOS 9.0及以上的操作系统。
 SDK放在SDK文件夹内
 
+如需接入除本文功能之外，详见如下：
+
+[分享/接入文档](https://github.com/gm88tp/Ios-Domestic-SDK-Demo/blob/master/docs/share.md)
+
 #### 接入流程
 
 ### 准备
