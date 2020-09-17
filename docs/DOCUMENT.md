@@ -9,6 +9,10 @@ SDK放在SDK文件夹内
 
 [分享/接入文档](https://github.com/gm88tp/Ios-Domestic-SDK-Demo/blob/master/docs/share.md)
 
+[广告/接入文档](advertising.md)
+
+[推送/接入文档](push.md)
+
 #### 接入流程
 
 ### 准备
