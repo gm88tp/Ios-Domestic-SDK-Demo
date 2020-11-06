@@ -20,12 +20,12 @@
 		5399F48624875229005BC2B3 /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F484248751CD005BC2B3 /* loginSDK.framework */; };
 		5399F48724875229005BC2B3 /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F484248751CD005BC2B3 /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5399F48B248754AF005BC2B3 /* loginSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5399F48A248754AF005BC2B3 /* loginSDK.m */; };
-		5399F492248756B8005BC2B3 /* advertisingCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48E248754F1005BC2B3 /* advertisingCenter.framework */; };
-		5399F493248756B8005BC2B3 /* advertisingCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48E248754F1005BC2B3 /* advertisingCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5399F494248756BA005BC2B3 /* serverPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48D248754F1005BC2B3 /* serverPush.framework */; };
-		5399F495248756BA005BC2B3 /* serverPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48D248754F1005BC2B3 /* serverPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5399F496248756BD005BC2B3 /* shareGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48C248754F1005BC2B3 /* shareGroup.framework */; };
-		5399F497248756BD005BC2B3 /* shareGroup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5399F48C248754F1005BC2B3 /* shareGroup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		539E11EB2552C0F700CA8CF5 /* advertisingCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */; };
+		539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; };
+		539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		539E11EF2552C0FA00CA8CF5 /* shareGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E62552C0EE00CA8CF5 /* shareGroup.framework */; };
+		539E11F02552C0FA00CA8CF5 /* shareGroup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E62552C0EE00CA8CF5 /* shareGroup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,10 +35,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5399F497248756BD005BC2B3 /* shareGroup.framework in Embed Frameworks */,
-				5399F493248756B8005BC2B3 /* advertisingCenter.framework in Embed Frameworks */,
+				539E11F02552C0FA00CA8CF5 /* shareGroup.framework in Embed Frameworks */,
+				539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */,
 				5399F48724875229005BC2B3 /* loginSDK.framework in Embed Frameworks */,
-				5399F495248756BA005BC2B3 /* serverPush.framework in Embed Frameworks */,
+				539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,10 +63,10 @@
 		5399F484248751CD005BC2B3 /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
 		5399F489248754AF005BC2B3 /* loginSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginSDK.h; sourceTree = "<group>"; };
 		5399F48A248754AF005BC2B3 /* loginSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginSDK.m; sourceTree = "<group>"; };
-		5399F48C248754F1005BC2B3 /* shareGroup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shareGroup.framework; path = ../../../sdk/shareGroup.framework; sourceTree = "<group>"; };
-		5399F48D248754F1005BC2B3 /* serverPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = serverPush.framework; path = ../../../sdk/serverPush.framework; sourceTree = "<group>"; };
-		5399F48E248754F1005BC2B3 /* advertisingCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = advertisingCenter.framework; path = ../../../sdk/advertisingCenter.framework; sourceTree = "<group>"; };
 		5399F498248758FD005BC2B3 /* demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demo.entitlements; sourceTree = "<group>"; };
+		539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = advertisingCenter.framework; sourceTree = "<group>"; };
+		539E11E62552C0EE00CA8CF5 /* shareGroup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = shareGroup.framework; sourceTree = "<group>"; };
+		539E11E72552C0EE00CA8CF5 /* serverPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = serverPush.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5399F496248756BD005BC2B3 /* shareGroup.framework in Frameworks */,
-				5399F492248756B8005BC2B3 /* advertisingCenter.framework in Frameworks */,
+				539E11EF2552C0FA00CA8CF5 /* shareGroup.framework in Frameworks */,
+				539E11EB2552C0F700CA8CF5 /* advertisingCenter.framework in Frameworks */,
 				5399F48624875229005BC2B3 /* loginSDK.framework in Frameworks */,
-				5399F494248756BA005BC2B3 /* serverPush.framework in Frameworks */,
+				539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				5399F498248758FD005BC2B3 /* demo.entitlements */,
+				539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */,
+				539E11E72552C0EE00CA8CF5 /* serverPush.framework */,
+				539E11E62552C0EE00CA8CF5 /* shareGroup.framework */,
 				5399F489248754AF005BC2B3 /* loginSDK.h */,
 				5399F48A248754AF005BC2B3 /* loginSDK.m */,
-				5399F48E248754F1005BC2B3 /* advertisingCenter.framework */,
-				5399F48D248754F1005BC2B3 /* serverPush.framework */,
-				5399F48C248754F1005BC2B3 /* shareGroup.framework */,
 				5399F484248751CD005BC2B3 /* loginSDK.framework */,
 				5399F47C24874A20005BC2B3 /* baidumobadsdk.bundle */,
 				5399F47F24874A20005BC2B3 /* BUAdSDK.bundle */,
@@ -154,7 +154,7 @@
 		5399F45024874783005BC2B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = rosehyird;
 				TargetAttributes = {
 					5399F45724874783005BC2B3 = {
@@ -257,6 +257,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -315,6 +316,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -347,19 +349,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = demo/demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Q42Z373JL4;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/demo",
 				);
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gm.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.immortals.ios.tw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,19 +374,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = demo/demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Q42Z373JL4;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/demo",
 				);
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gm.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.immortals.ios.tw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

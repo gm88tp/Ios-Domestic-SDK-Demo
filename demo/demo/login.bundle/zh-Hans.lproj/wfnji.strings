@@ -8,7 +8,7 @@
 "switchaccount"             ="切换账号";
 "switchsuccess"             ="切换账号成功";
 "addcount"                  ="添加账号";
-"login"                     ="登录";
+"login"                     ="进入游戏";
 "logout"                    ="注销";
 "accountnum"                ="账号/手机号";
 "phonenum"                  ="手机号";
@@ -124,7 +124,7 @@
 "endcolor"                  ="#000000";
 
 "registphone"               = "手机注册";
-"defaultlogin"              = "账号登录";
+"defaultlogin"              = "登录游戏";
 "customerservice"           = "联系客服";
 "personinfo"                = "个人信息";
 "persioncenter"             = "用户中心";

@@ -157,6 +157,6 @@
 	<key>markbtnTxtcolor</key>
 	<string>#000000</string>
 	<key>loginTitleBgColor</key>
-	<string>#f0f0f0</string>
+	<string>#ffffff</string>
 </dict>
 </plist>

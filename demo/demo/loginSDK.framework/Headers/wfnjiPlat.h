@@ -283,6 +283,7 @@ status 0 未实名 1实名 2查询失败
 
 
 +(void)log:(NSString*)str;
+
 @end
 
 
