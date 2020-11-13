@@ -420,5 +420,5 @@ SDK放在SDK文件夹内
 示例
 
 ```objectivec
-[wfnjiPlat  returnIDFV];
+[loginSDK returnIDFV];
 ```
