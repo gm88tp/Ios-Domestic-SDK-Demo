@@ -44,7 +44,6 @@ SDK放在SDK文件夹内
 
 | 参数         | 类型   | 描述                   | 示例                                      |
 | ------------ | ------ | ---------------------- | ----------------------------------------- |
-| tlink        | String | 腾讯的链接地址         | https://yjdzz.unoao.com/qq_conn/101860838 |
 | channel      | String | 渠道id，默认不用修改   | 121                                       |
 | gameid       | String | 游戏ID                 | 1156                                      |
 | trackKey     | String | 数据统计的key          | b17e8a65fd93353c00349ee3a2a565b8          |
@@ -52,9 +51,12 @@ SDK放在SDK文件夹内
 | wlink        | String | 微信的链接地址         | https://yjdzz.unoao.com/yjdzz/            |
 | wbAppKey     | String | 微博的appkey           | 3118377197                                |
 | rolelevel    | String | 角色等级，默认不用修改 | 6                                         |
+| tlink        | String | 腾讯的链接地址         | https://yjdzz.unoao.com/qq_conn/101860838 |
 | tenchentId   | String | 腾讯的客户端id         | 101860838                                 |
 | pushAppid    | String | push的appid            | 1600005427                                |
 | pushAppkey   | String | push的appkey           | IIOMAQYO58GB                              |
+
+注：按照需要接入的功能模块接入，修改相关的参数。
 
 ### 接入方法说明
 
