@@ -35,7 +35,26 @@ SDK放在SDK文件夹内
 - 在Build Settings——>> Other linker Flags 设置-ObjC
 - 如果使用推送framework，请在Signing & Capabilities ——>>1、 添加Background Modes 勾选Remote notifications；2、添加Push Notifications。
 
+### 参数相关
 
+#### 给到的.bundle
+
+* 使用给到的loginSDK.h和loginSDK.m，可以使用此文档所有书写的接口。
+* 相关参数需要填写在给到的.bundle的infoset.plist中，详见下表所示，所有参数的注释。
+
+| 参数         | 类型   | 描述                   | 示例                                      |
+| ------------ | ------ | ---------------------- | ----------------------------------------- |
+| tlink        | String | 腾讯的链接地址         | https://yjdzz.unoao.com/qq_conn/101860838 |
+| channel      | String | 渠道id，默认不用修改   | 121                                       |
+| gameid       | String | 游戏ID                 | 1156                                      |
+| trackKey     | String | 数据统计的key          | b17e8a65fd93353c00349ee3a2a565b8          |
+| weichatAppid | String | 微信的appid            | wx180c8f3360de0b12                        |
+| wlink        | String | 微信的链接地址         | https://yjdzz.unoao.com/yjdzz/            |
+| wbAppKey     | String | 微博的appkey           | 3118377197                                |
+| rolelevel    | String | 角色等级，默认不用修改 | 6                                         |
+| tenchentId   | String | 腾讯的客户端id         | 101860838                                 |
+| pushAppid    | String | push的appid            | 1600005427                                |
+| pushAppkey   | String | push的appkey           | IIOMAQYO58GB                              |
 
 ### 接入方法说明
 
