@@ -46,7 +46,7 @@ SDK放在SDK文件夹内
 | ------------ | ------ | ---------------------- | ----------------------------------------- |
 | channel      | String | 渠道id，默认不用修改   | 121                                       |
 | gameid       | String | 游戏ID                 | 1156                                      |
-| trackKey     | String | 数据统计的key          | b17e8a65fd93353c00349ee3a2a565b8          |
+| trackKey     | String | 热云数据统计的key          | b17e8a65fd93353c00349ee3a2a565b8          |
 | weichatAppid | String | 微信的appid            | wx180c8f3360de0b12                        |
 | wlink        | String | 微信的链接地址         | https://yjdzz.unoao.com/yjdzz/            |
 | wbAppKey     | String | 微博的appkey           | 3118377197                                |
