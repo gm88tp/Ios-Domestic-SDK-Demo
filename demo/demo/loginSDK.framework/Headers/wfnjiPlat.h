@@ -76,7 +76,7 @@
 +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 
 
- 
++ (void)applicationWillTerminate:(UIApplication *)application;
 
 /**
  必须最先接入的方法  平台初始化方法
@@ -283,6 +283,8 @@ status 0 未实名 1实名 2查询失败
 
 
 +(void)log:(NSString*)str;
+
++ (void)logTracking:(NSDictionary *)param;
 
 @end
 

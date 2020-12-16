@@ -119,7 +119,7 @@
 "ordernil"                  ="没有对应购买商品";
 "orderrequest"              ="支付请求失败";
 "orderunknow"               ="未知错误"   ;
-"version"                   ="3.1.9";
+"version"                   ="3.8.1";
 "startcolor"                ="#333333";
 "endcolor"                  ="#000000";
 

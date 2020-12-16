@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger , statusCode) {
 @interface sharePlatform : NSObject
 +(sharePlatform *)getInit;
 
-- (void)registerAppwchat:(NSString *)wappid universalLinkAppwchat:(NSString *)wchatlink wbAppkey:(NSString *)appkey tenchentId :(NSString *)qAppid universalLinkqwchat:(NSString *)qlink;
+- (void)registerAppwchat:(NSString *)wappid universalLinkAppwchat:(NSString *)wchatlink wbAppkey:(NSString *)appkey universalLinkWb:(NSString *)wblink tenchentId :(NSString *)qAppid universalLinkqwchat:(NSString *)qlink;
 
 + (void)shareWithContent:(shareContentItem *)contentObj
                shareType:(shareType)shareType

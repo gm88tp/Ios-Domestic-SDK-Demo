@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [loginSDK initDelegate:self];
-    [adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"2536"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
+    [adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"1156"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
     return YES;
 }
 
@@ -48,6 +48,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [loginSDK applicationWillTerminate:application];
 }
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     
