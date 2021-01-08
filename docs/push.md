@@ -61,4 +61,4 @@ SDK放在SDK文件夹内
 [pushPlatform startXGWithAppID:1600005427 appKey:@"IIOMAQYO58GB"  delegate:self ];
 ```
 
-## 
+**注：如果接入时使用了给到的loginSDK.h和loginSDK.m，那么在`+ (void)initDelegate:( id )delegate;`方法中，当pushFoundation设置为YES时，已经调用初始化推送SDK，相关参数配置在login.bundle的infoset.plist中，具体参数含义详见[DOCUMENT的参数相关](DOCUMENT.md)。**

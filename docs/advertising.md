@@ -48,24 +48,25 @@ SDK放在SDK文件夹内
 
 ###### 参数
 
-| 参数名 | 类型     | 必需 | 示例          | 说明                              |
-| :----- | :------- | ---- | ------------- | --------------------------------- |
-| key    | NSString | 否   | @"0104***"    | 百度广告的key，没有可以传空字符串 |
-| gameID | NSString | 是   | @"2536"       | 游戏id                            |
-| GDTID  | NSString | 否   | @"1109157353" | 穿山甲广告id，可以传空            |
-| GDTKey | NSString | 否   | @"6570***"    | 穿山甲key，可以传空               |
+此参数表适用于SDK v3.8.1及以上版本
+
+| 参数名 | 类型     | 必需 | 示例 | 说明   |
+| ------ | -------- | ---- | ---- | ------ |
+| gameID | NSString | 是   | 2780 | 游戏id |
 
 ###### 方法
 
-```objectivec
-+ (void)setupPlatformReyunKey:(NSString *)key gameID:(NSString *)gameID  GDTID:(NSString *)gdtID GDTKey:(NSString *)gdtkey;
+```objective-c
++ (void)setupPlatformGameID:(NSString *)gameID;
 ```
 
 ###### 示例
 
-```objectivec
-[adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"2536"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
+```objective-c
+[adPlatform setupPlatformGameID:@"2780"];
 ```
+
+**注：`+ (void)setupPlatformReyunKey:(NSString *)key gameID:(NSString *)gameID  GDTID:(NSString *)gdtID GDTKey:(NSString *)gdtkey;` 此方法在v3.8.3废弃**
 
 ## 
 
@@ -80,16 +81,20 @@ SDK放在SDK文件夹内
 ###### 方法
 
 ```objectivec
-+(void)pulladvertisingCenterRequest;
++ (void)pullAdvertisingReward;
 ```
 
 ###### 示例
 
 ```objectivec
-[adPlatform pulladvertisingCenterRequest];
+[adPlatform pullAdvertisingReward];
 ```
 
-## 
+**注：`+(void)pulladvertisingCenterRequest;`此方法在v3.8.3废弃**
+
+
+
+---
 
 #### 获取设备标识
 

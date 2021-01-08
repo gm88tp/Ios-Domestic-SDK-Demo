@@ -48,23 +48,24 @@ SDK放在SDK文件夹内
 | Appwchat              | NSString | 是   | wx180c8f3360de0b12 | 微信应用id        |
 | universalLinkAppwchat | NSString | 是   | https://….         | 微信universalLink |
 | wbAppkey              | NSString | 是   | 3118377197         | 微博appkey        |
-| universalLinkWb       | NSString | 是   | https://….         | 微博universalLink |
 | tenchentId            | NSString | 是   | 101860838          | qq应用id          |
 | universalLinkqwchat   | NSString | 是   | https://….         | qquniversalLink   |
 
 ###### 方法
 
 ```objectivec
-- (void)registerAppwchat:(NSString *)wappid universalLinkAppwchat:(NSString *)wchatlink wbAppkey:(NSString *)appkey universalLinkWb:(NSString *)wblink tenchentId :(NSString *)qAppid universalLinkqwchat:(NSString *)qlink;
+- (void)registerAppwchat:(NSString *)wappid universalLinkAppwchat:(NSString *)wchatlink wbAppkey:(NSString *)appkey tenchentId :(NSString *)qAppid universalLinkqwchat:(NSString *)qlink;
 ```
 
 ###### 示例
 
 ```objectivec
-[[sharePlatform getInit] registerAppwchat:[loginSDK getInfoString:@"weichatAppid"] universalLinkAppwchat:[loginSDK getInfoString:@"wlink"] wbAppkey:[loginSDK getInfoString:@"wbAppKey"] universalLinkWb:[loginSDK getInfoString:@"wblink"] tenchentId:[loginSDK getInfoString:@"tenchentId"] universalLinkqwchat:[loginSDK getInfoString:@"tlink"]];
+[[sharePlatform getInit] registerAppwchat:[loginSDK getInfoString:@"weichatAppid"] universalLinkAppwchat:[loginSDK getInfoString:@"wlink"] wbAppkey:[loginSDK getInfoString:@"wbAppKey"] tenchentId:[loginSDK getInfoString:@"tenchentId"] universalLinkqwchat:[loginSDK getInfoString:@"tlink"]];
 ```
 
-## 
+**注：如果接入时使用了给到的loginSDK.h和loginSDK.m，那么在`+ (void)initDelegate:( id )delegate;`方法中，当shareFoundation设置为YES时，已经调用初始化推送SDK，相关参数配置在login.bundle的infoset.plist中，具体参数含义详见[DOCUMENT的参数相关](DOCUMENT.md)。**
+
+
 
 #### 打开url
 
