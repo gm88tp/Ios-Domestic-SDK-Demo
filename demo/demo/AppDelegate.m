@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [loginSDK initDelegate:self];
-    [adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"1156"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
+    [adPlatform setupPlatformGameID:@"1156"];
+//    [adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"1156"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
     return YES;
 }
 

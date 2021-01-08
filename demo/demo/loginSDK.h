@@ -6,7 +6,7 @@
 //  Copyright © 2020 com.english. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import <loginSDK/wfnjiPlat.h>
+#import <loginSDK/tenovPlat.h>
 #define shareFoundation  YES
 #define pushFoundation   YES
 
@@ -22,7 +22,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface loginSDK : wfnjiPlat
+@interface loginSDK : tenovPlat
 + (void)initDelegate:(  id )delegate;
 
 

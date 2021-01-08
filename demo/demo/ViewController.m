@@ -13,7 +13,7 @@
 #import "advertisingCenter/adPlatform.h"
 
 #define notificationName  @"adnotification"
-@interface ViewController ()<wfnjiLoginCallBack,wfnjiPayCallBack,UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<tenovPayCallBack,tenovLoginCallBack,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView  * tab;
 @property (nonatomic,strong)NSArray      * arr;
 @end
@@ -27,7 +27,7 @@
     [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.arr = @[@"登录",@"支付",@"退出",@"角色打点", @"通用打点方法",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"广告"
+    self.arr = @[@"登录",@"支付",@"退出",@"角色打点", @"通用打点方法",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"广告",@"剩余时长",@"用户年龄"
     ];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(notificationFunc:) name:notificationName   object:nil];
 }
@@ -127,9 +127,27 @@
          }];
      }else if(indexPath.row ==11){
          //广告
-         [adPlatform pulladvertisingCenterRequest];
-     }
+         [adPlatform pullAdvertisingReward];
+     } else if (indexPath.row == 12) {
+         NSString *str = [loginSDK remainingTime];
+          //-1表示没有开启防沉迷
+          [self setPromot:[NSString stringWithFormat:@"说明：-1表示未开启防沉迷，其他数值表示剩余时长。返回结果：%@",str]];
+          
+          
+      } else if (indexPath.row == 13) {
+          NSString *str = [loginSDK antiaddictionInfo];
+          [self setPromot:[NSString stringWithFormat:@"说明：用户年龄 1、 未实名 2、8岁以下（不包含8岁） 3、8-16（包含8岁，不包含16岁） 4、16-18（包含16岁，不包含18岁）5、18岁以上（包含18）。返回结果：%@",str]];
+      }
  }
+
+- (void)setPromot:(NSString *)strPro{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:strPro preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+    }];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 - (shareContentItem *)setShareContent {
     shareContentItem * item = [[shareContentItem alloc]init];
@@ -155,18 +173,50 @@
 
 //支付
 - (void)userBuy  {
-    wfnjiOrderModel* mPayInfo = [[wfnjiOrderModel alloc] init];
-    /** 商品id */
-    mPayInfo.productID= @"1101";
+    UIAlertController *buy = [UIAlertController alertControllerWithTitle:@"支付" message:@"请输入相关商品信息" preferredStyle:UIAlertControllerStyleAlert];
+    __block UITextField *goodId,*price,*name;
+    [buy addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入商品id";
+        goodId = textField;
+    }];
+    [buy addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入价格";
+        price = textField;
+    }];
+    [buy addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入商品名称";
+        name = textField;
+    }];
+    
+    
+    
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"支付" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //新手引导
+        [self  pay:goodId.text withPrice:price.text withName:name.text];
+    }];
+
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+    }];
+    [buy addAction:sure];
+    [buy addAction:cancel];
+    [self presentViewController:buy animated:YES completion:nil];
+    
+}
+
+- (void)pay:(NSString *)goodid withPrice:(NSString *)price withName:(NSString *)name {
+    tenovOrderModel* mPayInfo = [[tenovOrderModel alloc] init];
+    /** 商品id *///1101
+    mPayInfo.productID = goodid;
     /** Y 商品名 */
-    mPayInfo.productName=@"商品名字测试";
+    mPayInfo.productName = name;
     /** Y 商品价格 */
-    mPayInfo.productPrice=@"0.99";
+    mPayInfo.productPrice = price;
     /** 商品描述（不传则使用productName） */
     mPayInfo.productDes=@"商品描述";
     /** Y 商品订单号 透传数据*/
     int y =100 +  (arc4random() % 100000000);
-    mPayInfo.gameReceipts=[NSString stringWithFormat:@"%d",y];
+    mPayInfo.gameReceipts=[NSString stringWithFormat:@"%d",y];//[[collestTools dicTransformStr:@{@"gameAttach":@{@"activityId":@"54658",@"levelId":@"0"},@"orderId":@"15w w669wqwqq63697791115988"}] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     /** Y 游戏角色id */
     mPayInfo.roleID=@"554";
     /** Y 游戏角色名 */
@@ -186,8 +236,8 @@
     /**
      回调地址 可传可不传，不传使用默认
      */
-    //mPayInfo.wfnjinotifyURL = @"http://demo.gm88.com/ok.php?gameid=1156&promote=2";
-    [wfnjiPlat wfnjipay:mPayInfo CallBack:self];
+    //mPayInfo.tenovnotifyURL = @"http://demo.gm88.com/ok.php?gameid=1156&promote=2";
+    [tenovPlat tenovpay:mPayInfo CallBack:self];
 
 }
 
@@ -210,7 +260,7 @@
 
 
 #pragma mark -wfnjiLoginCallBack,wfnjiPayCallBack
--(void)onFinish:(wfnjiStatus)code Data:(NSDictionary *)Data {
+-(void)onFinish:(tenovStatus)code Data:(NSDictionary *)Data {
     NSLog(@"%ld",code);
     NSLog(@"用户信息info==%@\n"   , Data);
     if(code== LOGIN_SUCCESS){

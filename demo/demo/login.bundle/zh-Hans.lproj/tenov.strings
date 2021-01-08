@@ -1,5 +1,5 @@
 /* 
-  wfnji.strings
+  tenov.strings
   loginSDK
 
   Created by GM on 2019/1/2.
@@ -16,8 +16,7 @@
 "forgetpassword"            ="找回密码";
 "registeraccount"           ="注册账号";
 "codelogin"                 ="验证码登录";
-"getcode"                   ="获取";
-"logincode"                 ="验证码";
+"getcode"                   ="获取验证码";
 "Passwordlogin"             ="密码登录";
 "Thirdpartlogin"            ="第三方账号登录";
 "resetpassword"             ="重置密码";
@@ -38,18 +37,18 @@
 "bangphone"                 ="绑定手机";
 "welcomeback"               ="欢迎回来";
 "part"                      ="分";
-"fastlogin"                 ="快速登录";
+"fastlogin"                 ="快捷登录";
 "Pleaseenterphonenumber"    ="请输入手机号";
 "Pleaseentermobilenumber"   ="请输入手机号/账号";
 "Pleaseentercorrectphone"   ="请输入正确手机号";
 "Pleaseenterpassword"       ="请输入密码";
 "Pleaseentercode"           ="请输入验证码";
 "phoneerror"                ="手机号不正确";
-"phonenotrule"              ="手机号不符号规则";
+"phonenotnull"              ="手机号不能为空";
 "passwordcannotempty"       ="密码不能为空";
 "codecannotempty"           ="验证码不能为空";
 "Networkerror"              ="网络出错";
-"Networkexception"          ="网络连接异常";
+"Networkexception"          ="网路开了小差请重试";
 "back"                      ="返回";
 "copy"                      ="拷贝";
 "OK"                        ="确定";
@@ -58,7 +57,7 @@
 "Noallowedpay"              ="不允许程序内付费";
 "Paymentverificationsuccess"="支付验证成功";
 "resultunknown"             ="结果未知，请查询服务器";
-"wfnjiGame"               ="游戏账户";
+"tenovGame"               ="游戏账户";
 "Paymentverificationfailure"="支付验证失败";
 "Passwordresetsuccessfully" ="密码重置成功，请重新登录";
 "full"                      ="满";
@@ -119,7 +118,8 @@
 "ordernil"                  ="没有对应购买商品";
 "orderrequest"              ="支付请求失败";
 "orderunknow"               ="未知错误"   ;
-"version"                   ="3.8.1";
+"version"                   = "3.8.3";
+//"3.1.9";
 "startcolor"                ="#333333";
 "endcolor"                  ="#000000";
 
@@ -128,4 +128,67 @@
 "customerservice"           = "联系客服";
 "personinfo"                = "个人信息";
 "persioncenter"             = "用户中心";
-
+"newlogintip"               = "以下是您登录的账号和密码";
+"gobackloginview"           ="返回手机登录";
+"stillfastlogin"            = "继续进入游戏";
+"autologintip"              = "自动登录中";
+"bindphone"                 = "手机绑定";
+"changepwd"                 = "修改密码";
+"changephone"               = "手机换绑";
+"nexttext"                  = "下一步";
+"inputoldphone"             = "请输入原本手机号码";
+"inputnewphone"             = "请输入新手机号码";
+"changephonesuccess"        = "换绑手机号码成功";
+"getcodesuccess"            = "获取验证码成功!";
+"getcodefail"               = "获取验证码失败!";
+"codeerror"                 = "验证码错误";
+"bindaccount"               = "账号绑定";
+"codetf"                    = "验证码";
+"passwordcounttip"          = "请输入6到14位密码";
+"changepwdsuccess"          = "修改成功";
+"resetpwdsuccess"           = "重置密码成功";
+"relogin"                   ="重新登录";
+"gologin"                   ="前去登录";
+"userservicetip"            = "我已阅读并同意 ";
+"userservicetext"           = "用户服务协议";
+"phoneloginbtn"             = "手机登录";
+"accountloginbtn"           = "账号登录";
+"realnameinfo"              = "实名信息";
+"name"                      = "姓名";
+"iccode"                    = "身份证号码";
+"realname"                  = "实名认证";
+"realnamecontent"           = "\t亲爱的玩家，按照国家相关法规要求，未实名登记的帐号体验时长不超过1小时，且不能充值，请尽快完成实名认证，以获得完整的游戏体验";
+"realnametip"               = "认证信息只能提交一次，不可修改，慎重填写！该信息仅用于实名认证，不会透露于任何第三方。";
+"inputname"                 = "请输入姓名";
+"inputiccode"               = "请输入身份证号";
+"surerealname"              = "确认登记";
+"iccodeerror"               = "请正确输入身份证号码";
+"certificatesuccess"        = "认证成功";
+"certificatefail"           = "认证失败";
+"uncertificatecanotbuy"     = "未实名认证用户无法购买游戏道具!";
+"nonageusernotrecharge"     = "未成年用户不可充值!";
+"thismonthnotrecharge"      = "根据规定本月您已经不能充值";
+"stillcanplayfifteen"       = "根据规定未成年人累计游玩时长不可超过90分钟。您还可游玩15分钟";
+"stillcanplayfifteenanhour" = "根据规定未实名制认证用户只能游玩60分钟 您还可游玩15分钟";
+"uncertificatecanotplay"    = "未经过实名认证无法进行游戏！";
+"gocertificate"             = "前去认证";
+"certificated"              = "已认证";
+"close"                     = "关闭";
+"out"                       = "退出";
+"welcomegame"               = "欢迎进入游戏";
+"safetip"                   = "安全提示";
+"gobindphone"               = "前往绑定手机";
+"stillchangeaccount"        = "仍然切换账号";
+"servicecenter"             = "客服中心";
+"servicetitle"              = "尊敬的用户你好:";
+"servicecontent"            = "  如果您在游戏体验中有任何问题，请发邮件给我们，我们很乐意为您提供帮助。";
+"news"                      = "新闻公告";
+"gameactivity"              = "游戏活动";
+"VIPservice"                = "VIP服务";
+"growrule"                  = "成长值规则:1元=10成长值";
+"vipexclusive"              = "VIP专属客服";
+"viptip"                    = "尊敬的VIP用户，您好，\n请选择一下专属客服通道进行沟通！";
+"getfail"                   = "领取失败";
+"aleadygot"                 = "已领取";
+"gotover"                   = "已领完";
+"getbtn"                    = "领取";

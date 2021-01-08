@@ -1,14 +1,14 @@
 //
-//  wfnjiUserInfo.h
-//  wfnjiSDK
+//  tenovUserInfo.h
+//  tenovSDK
 //
-//  Created by wfnji on 2018/3/23.
-//  Copyright © 2018年 wfnji. All rights reserved.
+//  Created by tenov on 2018/3/23.
+//  Copyright © 2018年 tenov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface wfnjiUserInfo : NSObject
+@interface tenovUserInfo : NSObject
 /**
  用户的 UID
  */
@@ -68,13 +68,13 @@
  @param mUserInfo 用户信息
  @return NSDictionary
  */
-+(NSDictionary*)UserInfoToNSDictionary:(wfnjiUserInfo*)mUserInfo;
++(NSDictionary*)UserInfoToNSDictionary:(tenovUserInfo*)mUserInfo;
 
 /**
- NSDictionary转wfnjiUserInfo
+ NSDictionary转tenovUserInfo
  
- @param dic NSDictionary转wfnjiUserInfo
- @return wfnjiUserInfo
+ @param dic NSDictionary转tenovUserInfo
+ @return tenovUserInfo
  */
-+(wfnjiUserInfo*)NSDictionaryToUserInfo:(NSDictionary*)dic;
++(tenovUserInfo*)NSDictionaryToUserInfo:(NSDictionary*)dic;
 @end

@@ -15,7 +15,10 @@
     #ifdef shareFoundation
 
     [sharePlatform wqewq];
+//    [[sharePlatform getInit] registerAppwchat:[loginSDK getInfoString:@"weichatAppid"] universalLinkAppwchat:[loginSDK getInfoString:@"wlink"] wbAppkey:[loginSDK getInfoString:@"wbAppKey"]  tenchentId:[loginSDK getInfoString:@"tenchentId"] universalLinkqwchat:[loginSDK getInfoString:@"tlink"]];
+    
     [[sharePlatform getInit] registerAppwchat:[loginSDK getInfoString:@"weichatAppid"] universalLinkAppwchat:[loginSDK getInfoString:@"wlink"] wbAppkey:[loginSDK getInfoString:@"wbAppKey"] universalLinkWb:[loginSDK getInfoString:@"wblink"] tenchentId:[loginSDK getInfoString:@"tenchentId"] universalLinkqwchat:[loginSDK getInfoString:@"tlink"]];
+    
     #endif
     
     #ifdef pushFoundation

@@ -1,14 +1,14 @@
 //
-//  wfnjiOrderModel.h
-//  wfnjiSDK
+//  tenovOrderModel.h
+//  tenovSDK
 //
-//  Created by wfnji on 2018/4/12.
-//  Copyright © 2018年 wfnji. All rights reserved.
+//  Created by tenov on 2018/4/12.
+//  Copyright © 2018年 tenov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface wfnjiOrderModel : NSObject
+@interface tenovOrderModel : NSObject
 
 /** 商品id */
 @property (nonatomic,copy)NSString* productID;
