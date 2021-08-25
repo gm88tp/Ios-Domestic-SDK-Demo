@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "loginSDK.h"
+#import "loginSDK/platInit.h"
+#import "loginSDK/platTools.h"
+#import <loginSDK/platLogin.h>
+#import <pushCenter/pushPlat.h>
 #import "advertisingCenter/adPlatform.h"
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -17,9 +20,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [loginSDK initDelegate:self];
+    [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
+    [pushPlat initPush:self gameId:@"1156"];
     [adPlatform setupPlatformGameID:@"1156"];
-//    [adPlatform setupPlatformReyunKey:@"0104c3cf2210c0973cf8b59be52635cd" gameID:@"1156"  GDTID: @"1109157353" GDTKey:@"657084a6a4ad02dcb6f7504af81c587b"];
+
     return YES;
 }
 
@@ -31,14 +35,14 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-     [loginSDK   applicationDidEnterBackground:application];
+     [platInit   applicationDidEnterBackground:application];
    
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     
-     [loginSDK  applicationWillEnterForeground:application];
+     [platInit  applicationWillEnterForeground:application];
 }
 
 
@@ -49,12 +53,36 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [loginSDK applicationWillTerminate:application];
+    [platInit applicationWillTerminate:application];
 }
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     
-    [loginSDK shareApplication:app openURL:url options:options];
+    [platInit application:app openURL:url options:options];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [pushPlat  didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+#pragma mark - UNUserNotificationCenterDelegate
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler __API_AVAILABLE(macos(10.14), ios(10.0), watchos(3.0), tvos(10.0)) {
+    //此处设置声音，角标，警告。设置了即使app在前台也可以显示推送信息
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+}
+
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler __API_AVAILABLE(macos(10.14), ios(10.0), watchos(3.0)) __API_UNAVAILABLE(tvos) {
+    //可以解析相关信息，做相应页面跳转
+    NSDictionary *dic = response.notification.request.content.userInfo;
+    NSLog(@"推送信息%@", dic);
+    [pushPlat receiveRemoteNotifications:dic];
+    completionHandler();
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification __API_AVAILABLE(macos(10.14), ios(12.0)) __API_UNAVAILABLE(watchos, tvos) {
+
 }
 
 

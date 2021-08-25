@@ -2,29 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>tlink</key>
-	<string>https://yjdzz.unoao.com/qq_conn/101860838</string>
+	<key>sdkkf</key>
+	<string>https://m.dre1e.com/kefu/?from=ios</string>
+	<key>requestUrl</key>
+	<string></string>
+	<key>sdkversion</key>
+	<string>3.9.2</string>
+	<key>appversion</key>
+	<string>1.0</string>
+	<key>sdkinfo</key>
+	<string>https://m.dre1e.com/index.php?act=base_agreement&amp;gm_source=IOS</string>
+	<key>appleId</key>
+	<string>1556383376</string>
+	<key>version</key>
+	<string>1.2.3</string>
 	<key>channel</key>
-	<string>121</string>
+	<string>2</string>
 	<key>gameid</key>
-	<string>1156</string>
-	<key>trackKey</key>
+	<string>4817</string>
+	<key>trackIoKey</key>
 	<string>6e4444b67f30314e699f983c197f21a6</string>
-	<key>weichatAppid</key>
-	<string>wx180c8f3360de0b12</string>
-	<key>wlink</key>
-	<string>https://yjdzz.unoao.com/yjdzz/</string>
-	<key>wbAppKey</key>
-	<string>3118377197</string>
-	<key>wblink</key>
-	<string>https://yjdzz.unoao.com/yjdzz/</string>
-	<key>rolelevel</key>
-	<string>6</string>
-	<key>tenchentId</key>
-	<string>101860838</string>
-	<key>pushAppid</key>
-	<string>1600005427</string>
-	<key>pushAppkey</key>
-	<string>IIOMAQYO58GB</string>
+	<key>kfkey</key>
+	<string>23b744c7f4a4b0688866f1d50facdae8</string>
+	<key>TAAppId</key>
+	<string>06842647fb7c48e794aafa3d6d3fc7d9</string>
+	<key>TAUrl</key>
+	<string>https://receiver.ta.thinkingdata.cn</string>
 </dict>
 </plist>

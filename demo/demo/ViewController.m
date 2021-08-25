@@ -7,13 +7,19 @@
 //
 
 #import "ViewController.h"
-#import "loginSDK.h"
+#import <loginSDK/platLogin.h>
+#import <loginSDK/LoginCallBack.h>
+#import <loginSDK/PurchaseCallBack.h>
+#import <loginSDK/platPurchase.h>
+#import <loginSDK/purchaseModel.h>
+#import "loginSDK/platTools.h"
 #import <shareGroup/shareContentItem.h>
 #import <shareGroup/sharePlatform.h>
 #import "advertisingCenter/adPlatform.h"
+#import <pushCenter/pushPlat.h>
 
 #define notificationName  @"adnotification"
-@interface ViewController ()<tenovPayCallBack,tenovLoginCallBack,UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<LoginCallBack,PurchaseCallBack,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView  * tab;
 @property (nonatomic,strong)NSArray      * arr;
 @end
@@ -27,7 +33,7 @@
     [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.arr = @[@"登录",@"支付",@"退出",@"角色打点", @"通用打点方法",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"广告",@"剩余时长",@"用户年龄"
+    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"广告",@"剩余时长",@"用户年龄",@"通知授权"
     ];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(notificationFunc:) name:notificationName   object:nil];
 }
@@ -63,13 +69,18 @@
      }
      else if(indexPath.row==3){
      
-         [loginSDK setGameRoleName:@"名字" gameLevel:@"等级" serverID:@"区服ID" roleID:@"游戏角色ID" statusType:@"类型"];
+         [platTools platRoleName:@"名字" gameLevel:@"等级" serverID:@"区服ID" roleID:@"游戏角色ID" status:@"类型" vipLevel:@"vip等级"];
      }
      else if(indexPath.row==4){
-         [loginSDK LogInfo:@"ads_CXJ_request_failure" EventDic:@{}];
-         
-     }  else if(indexPath.row==5){
          [sharePlatform shareWithContent:item  shareType:ShareTypeQQ shareResult:^(NSInteger shareResult) {
+             if(shareResult ==statusCodeSuccess){
+                                      NSLog(@"分享成功");
+                                  }else if (shareResult ==statusCodeCancel){
+                                      NSLog(@"分享失败");
+                                  }
+         }];
+     }  else if(indexPath.row==5){
+         [sharePlatform shareWithContent:item  shareType:ShareTypeQQZone shareResult:^(NSInteger shareResult) {
              if(shareResult ==statusCodeSuccess){
                                       NSLog(@"分享成功");
                                   }else if (shareResult ==statusCodeCancel){
@@ -79,15 +90,6 @@
          
              
      }  else if(indexPath.row==6){
-         [sharePlatform shareWithContent:item  shareType:ShareTypeQQZone shareResult:^(NSInteger shareResult) {
-             if(shareResult ==statusCodeSuccess){
-                                      NSLog(@"分享成功");
-                                  }else if (shareResult ==statusCodeCancel){
-                                      NSLog(@"分享失败");
-                                  }
-         }];
-                 
-     }  else if(indexPath.row==7){
          [sharePlatform shareWithContent:item  shareType:ShareTypeWeiBo shareResult:^(NSInteger shareResult) {
              if(shareResult ==statusCodeSuccess){
                  NSLog(@"分享成功");
@@ -96,8 +98,8 @@
              }
          }];
                      
-     }  else if(indexPath.row==8){
-         
+                 
+     }  else if(indexPath.row==7){
          [sharePlatform shareWithContent:item  shareType:ShareTypeWSession shareResult:^(NSInteger shareResult) {
              if(shareResult ==statusCodeSuccess){
                                       NSLog(@"分享成功");
@@ -105,10 +107,19 @@
                                       NSLog(@"分享失败");
                                   }
          }];
+                     
+     }  else if(indexPath.row==8){
          
+         [sharePlatform shareWithContent:item  shareType:ShareTypeWTimeline shareResult:^(NSInteger shareResult) {
+             if(shareResult ==statusCodeSuccess){
+                                      NSLog(@"分享成功");
+                                  }else if (shareResult ==statusCodeCancel){
+                                      NSLog(@"分享失败");
+                                  }
+         }];
      }
      else if(indexPath.row==9){
-         [sharePlatform shareWithContent:item  shareType:ShareTypeWTimeline shareResult:^(NSInteger shareResult) {
+         [sharePlatform shareWithContent:item  shareType:ShareTypeWFavorite shareResult:^(NSInteger shareResult) {
              if(shareResult ==statusCodeSuccess){
                                       NSLog(@"分享成功");
                                   }else if (shareResult ==statusCodeCancel){
@@ -118,25 +129,25 @@
          
      }
      else if(indexPath.row==10){
-         [sharePlatform shareWithContent:item  shareType:ShareTypeWFavorite shareResult:^(NSInteger shareResult) {
-             if(shareResult ==statusCodeSuccess){
-                                      NSLog(@"分享成功");
-                                  }else if (shareResult ==statusCodeCancel){
-                                      NSLog(@"分享失败");
-                                  }
-         }];
-     }else if(indexPath.row ==11){
-         //广告
          [adPlatform pullAdvertisingReward];
-     } else if (indexPath.row == 12) {
-         NSString *str = [loginSDK remainingTime];
+     }else if(indexPath.row ==11){
+         NSString *str = [platLogin remainingTime];
           //-1表示没有开启防沉迷
           [self setPromot:[NSString stringWithFormat:@"说明：-1表示未开启防沉迷，其他数值表示剩余时长。返回结果：%@",str]];
           
+     } else if (indexPath.row == 12) {
+         NSString *str = [platLogin antiaddictionInfo];
+         [self setPromot:[NSString stringWithFormat:@"说明：用户年龄 1、 未实名 2、8岁以下（不包含8岁） 3、8-16（包含8岁，不包含16岁） 4、16-18（包含16岁，不包含18岁）5、18岁以上（包含18）。返回结果：%@",str]];
           
       } else if (indexPath.row == 13) {
-          NSString *str = [loginSDK antiaddictionInfo];
-          [self setPromot:[NSString stringWithFormat:@"说明：用户年龄 1、 未实名 2、8岁以下（不包含8岁） 3、8-16（包含8岁，不包含16岁） 4、16-18（包含16岁，不包含18岁）5、18岁以上（包含18）。返回结果：%@",str]];
+          //通知授权，可以在需要的地方调用，必须调用，不调用，无法接受push
+          [pushPlat requestAuthorizationForRemoteNotifications:^(NSInteger result) {
+              if (result == 1) {
+                  NSLog(@"允许");
+              } else if (result == 2) {
+                  NSLog(@"不允许");
+              }
+          }];
       }
  }
 
@@ -162,13 +173,13 @@
 //登录
 - (void)userLogin  {
     
-    [loginSDK login:self];
+    [platLogin login:self];
  
 }
 
 //登出
 - (void)userExit  {
-    [loginSDK logout];
+    [platLogin logout];
 }
 
 //支付
@@ -205,7 +216,7 @@
 }
 
 - (void)pay:(NSString *)goodid withPrice:(NSString *)price withName:(NSString *)name {
-    tenovOrderModel* mPayInfo = [[tenovOrderModel alloc] init];
+    purchaseModel* mPayInfo = [[purchaseModel alloc] init];
     /** 商品id *///1101
     mPayInfo.productID = goodid;
     /** Y 商品名 */
@@ -237,7 +248,7 @@
      回调地址 可传可不传，不传使用默认
      */
     //mPayInfo.tenovnotifyURL = @"http://demo.gm88.com/ok.php?gameid=1156&promote=2";
-    [tenovPlat tenovpay:mPayInfo CallBack:self];
+    [platPurchase purchase:mPayInfo CallBack:self];
 
 }
 
@@ -259,29 +270,38 @@
 }
 
 
-#pragma mark -wfnjiLoginCallBack,wfnjiPayCallBack
--(void)onFinish:(tenovStatus)code Data:(NSDictionary *)Data {
-    NSLog(@"%ld",code);
-    NSLog(@"用户信息info==%@\n"   , Data);
-    if(code== LOGIN_SUCCESS){
-       NSLog(@"登录成功");
+#pragma mark - 登陆回调
+
+-(void)loginOnFinish:(loginStatus)code   Data:(NSDictionary*)Data
+{
+    NSLog(@"回调状态值：%ld",(long)code);
+    
+    
+    NSLog(@"回调：%@",Data);
+    if(code==LOGIN_SUCCESS){
+ 
+        [pushPlat upDeviceTokenWithUser:[NSString stringWithFormat:@"%@",[Data objectForKey:@"token"]]];
+    }else if(code ==LOGIN_SWITCH){
+        
     }else if(code== LOGOUT_SUCCESS){
-      //需要自己调用登录方法
-        [self userLogin];
-         NSLog(@"退出成功");
-    }else if  (code == LOGIN_SWITCH){
-         NSLog(@"切换账号");
-    }else if(code==PAY_SUCCESS){
-        NSLog(@"支付成功");
-    }else if (code ==PAY_FAILED){
-        
-        NSLog(@"支付失败");
-    }else if (code==PAY_CANCEL){
-        
-        NSLog(@"支付取消");
-    }else if (code==PAY_UNKNOWN){
-        NSLog(@"未知错误");
+     
+    }else if (code == LOGIN_UNUSE) {
+    
+        exit(0);
     }
+}
+
+#pragma mark - 支付回调
+- (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data{
+    if (code ==PURCHASE_SUCCESS){
+ 
+       } else if (code== PURCHASE_FAILED){
+ 
+       } else if (code==PURCHASE_CANCEL){
+      
+       } else if (code==PURCHASE_UNKNOWN){
+       
+       }
 }
 
 @end

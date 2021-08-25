@@ -1,0 +1,6 @@
+framework module pushCenter {
+  umbrella header "pushCenter.h"
+
+  export *
+  module * { export * }
+}

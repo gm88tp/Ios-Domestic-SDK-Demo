@@ -10,18 +10,18 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString * const SDK_VERSION     = @"3.9.1";
+
 @interface adPlatform : NSObject
 @property (nonatomic,strong)NSString  * gameID;
-//注册方法 废弃
-//+ (void)setupPlatformReyunKey:(NSString *)key gameID:(NSString *)gameID  GDTID:(NSString *)gdtID GDTKey:(NSString *)gdtkey;
-//注册方法2
+
+//注册方法
 + (void)setupPlatformGameID:(NSString *)gameID;
 //获取设备标识符
 + (NSString *)getUserSing;
 
 + (void)pullAdvertisingReward;
-//拉起激励视屏 废弃
-//+(void)pulladvertisingCenterRequest;
+
 /**
  
  上传用户信息用户排行榜
