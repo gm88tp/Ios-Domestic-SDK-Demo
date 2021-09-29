@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>3.8.3demo</string>
+	<string>3.9.3demo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -50,6 +50,16 @@
 				<string>wx180c8f3360de0b12</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>douyin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>awmms3veimohgix8</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
@@ -84,6 +94,9 @@
 		<string>weibosdk</string>
 		<string>weibosdk2.5</string>
 		<string>weibosdk3.3</string>
+		<string>douyinopensdk</string>
+		<string>douyinsharesdk</string>
+		<string>snssdk1128</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

@@ -12,6 +12,7 @@
 #import <loginSDK/platLogin.h>
 #import <pushCenter/pushPlat.h>
 #import "advertisingCenter/adPlatform.h"
+#import <shareCenter/sharePlatform.h>
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
@@ -24,6 +25,7 @@
     [pushPlat initPush:self gameId:@"1156"];
     [adPlatform setupPlatformGameID:@"1156"];
 
+    [[sharePlatform getInit] registerShare];
     return YES;
 }
 
@@ -58,7 +60,15 @@
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     
     [platInit application:app openURL:url options:options];
+    
+    [[sharePlatform getInit] shareApplication:app openURL:url options:options];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+    return [[sharePlatform getInit] application:application continueUserActivity:userActivity];
+
+
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

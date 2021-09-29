@@ -110,13 +110,6 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (void)logTracking:(NSDictionary *)param;
 
-//+ (void)requestAuthorizationForRemoteNotifications:(void(^)(NSInteger result))callback;
-//
-//+ (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
-//
-//+ (void)receiveRemoteNotifications:(NSDictionary *)dic;
-//
-//+ (void)applicationIconBadgeClear;
 @end
 
 NS_ASSUME_NONNULL_END

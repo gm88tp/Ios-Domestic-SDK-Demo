@@ -13,8 +13,8 @@
 #import <loginSDK/platPurchase.h>
 #import <loginSDK/purchaseModel.h>
 #import "loginSDK/platTools.h"
-#import <shareGroup/shareContentItem.h>
-#import <shareGroup/sharePlatform.h>
+#import "shareCenter/sharePlatform.h"
+#import "shareCenter/shareContentItem.h"
 #import "advertisingCenter/adPlatform.h"
 #import <pushCenter/pushPlat.h>
 
@@ -33,7 +33,7 @@
     [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"广告",@"剩余时长",@"用户年龄",@"通知授权"
+    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"多渠道分享",@"广告",@"剩余时长",@"用户年龄",@"通知授权"
     ];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(notificationFunc:) name:notificationName   object:nil];
 }
@@ -129,17 +129,24 @@
          
      }
      else if(indexPath.row==10){
-         [adPlatform pullAdvertisingReward];
+         [sharePlatform shareWithContent:item shareResult:^(NSInteger shareResult) {
+             if(shareResult ==statusCodeSuccess){
+                                      NSLog(@"分享成功");
+                                  }else if (shareResult ==statusCodeCancel){
+                                      NSLog(@"分享失败");
+                                  }
+         }];
      }else if(indexPath.row ==11){
+         [adPlatform pullAdvertisingReward];
+          
+     } else if (indexPath.row == 12) {
          NSString *str = [platLogin remainingTime];
           //-1表示没有开启防沉迷
           [self setPromot:[NSString stringWithFormat:@"说明：-1表示未开启防沉迷，其他数值表示剩余时长。返回结果：%@",str]];
-          
-     } else if (indexPath.row == 12) {
-         NSString *str = [platLogin antiaddictionInfo];
-         [self setPromot:[NSString stringWithFormat:@"说明：用户年龄 1、 未实名 2、8岁以下（不包含8岁） 3、8-16（包含8岁，不包含16岁） 4、16-18（包含16岁，不包含18岁）5、18岁以上（包含18）。返回结果：%@",str]];
-          
       } else if (indexPath.row == 13) {
+          NSString *str = [platLogin antiaddictionInfo];
+          [self setPromot:[NSString stringWithFormat:@"说明：用户年龄 1、 未实名 2、8岁以下（不包含8岁） 3、8-16（包含8岁，不包含16岁） 4、16-18（包含16岁，不包含18岁）5、18岁以上（包含18）。返回结果：%@",str]];
+      } else if (indexPath.row == 14) {
           //通知授权，可以在需要的地方调用，必须调用，不调用，无法接受push
           [pushPlat requestAuthorizationForRemoteNotifications:^(NSInteger result) {
               if (result == 1) {
@@ -164,8 +171,10 @@
     shareContentItem * item = [[shareContentItem alloc]init];
     item.share_title = @"分享测试";
     item.share_targeturl = @"https://www.baidu.com";
-    item.share_imgurl =@"123";//https://dl03.gm88.com/xmjlogo/fxxz.png";
+    item.share_imgurl =[[NSBundle mainBundle] pathForResource:@"test1" ofType:@"jpeg"];
     item.share_msg = @"一般情况新浪微博的Summary和微信,QQ的是不同的,新浪微博的是一般带链接的,而且总共字数不能超过140字";
+    item.share_id = @"4817001";
+    item.share_videourl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     return item;
 }
 

@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <UserNotifications/UserNotifications.h>
 
  
  
-@interface platInit : NSObject//<UNUserNotificationCenterDelegate>
+@interface platInit : NSObject
 
-//@property (nonatomic,assign) BOOL hasPush;
 
 /*!
  单例,预留接口

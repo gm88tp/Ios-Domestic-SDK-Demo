@@ -23,17 +23,19 @@
 		539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; };
 		539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		539E11EF2552C0FA00CA8CF5 /* shareGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E62552C0EE00CA8CF5 /* shareGroup.framework */; };
-		539E11F02552C0FA00CA8CF5 /* shareGroup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E62552C0EE00CA8CF5 /* shareGroup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8377332526D658B80087ED18 /* QYCustomResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332026D658B80087ED18 /* QYCustomResource.bundle */; };
 		8377332626D658B80087ED18 /* QYResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332126D658B80087ED18 /* QYResource.bundle */; };
 		8377332826D658B80087ED18 /* QYLanguage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332326D658B80087ED18 /* QYLanguage.bundle */; };
-		8377332926D658C00087ED18 /* NIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377331F26D658B80087ED18 /* NIMSDK.framework */; };
-		8377332A26D658C00087ED18 /* NIMSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8377331F26D658B80087ED18 /* NIMSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8377332B26D658C30087ED18 /* QYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332226D658B80087ED18 /* QYSDK.framework */; };
-		8377332C26D658C30087ED18 /* QYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332226D658B80087ED18 /* QYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; };
 		8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83FB3B492704483800D47E53 /* share.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83FB3B472704483800D47E53 /* share.bundle */; };
+		83FB3B4B27044FC500D47E53 /* shareCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B482704483800D47E53 /* shareCenter.framework */; };
+		83FB3B4C27044FC500D47E53 /* shareCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B482704483800D47E53 /* shareCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; };
+		83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4F2704522900D47E53 /* QYSDK.framework */; };
+		83FB3B552704523100D47E53 /* QYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4F2704522900D47E53 /* QYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83FB3B572704541400D47E53 /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 83FB3B562704541400D47E53 /* test1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,12 +45,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */,
+				83FB3B4C27044FC500D47E53 /* shareCenter.framework in Embed Frameworks */,
 				8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */,
-				539E11F02552C0FA00CA8CF5 /* shareGroup.framework in Embed Frameworks */,
+				83FB3B552704523100D47E53 /* QYSDK.framework in Embed Frameworks */,
 				539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */,
 				5399F48724875229005BC2B3 /* loginSDK.framework in Embed Frameworks */,
-				8377332C26D658C30087ED18 /* QYSDK.framework in Embed Frameworks */,
-				8377332A26D658C00087ED18 /* NIMSDK.framework in Embed Frameworks */,
 				539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -74,14 +76,16 @@
 		5399F484248751CD005BC2B3 /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
 		5399F498248758FD005BC2B3 /* demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demo.entitlements; sourceTree = "<group>"; };
 		539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = advertisingCenter.framework; sourceTree = "<group>"; };
-		539E11E62552C0EE00CA8CF5 /* shareGroup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = shareGroup.framework; sourceTree = "<group>"; };
 		539E11E72552C0EE00CA8CF5 /* serverPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = serverPush.framework; sourceTree = "<group>"; };
-		8377331F26D658B80087ED18 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NIMSDK.framework; sourceTree = "<group>"; };
 		8377332026D658B80087ED18 /* QYCustomResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYCustomResource.bundle; sourceTree = "<group>"; };
 		8377332126D658B80087ED18 /* QYResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYResource.bundle; sourceTree = "<group>"; };
-		8377332226D658B80087ED18 /* QYSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QYSDK.framework; sourceTree = "<group>"; };
 		8377332326D658B80087ED18 /* QYLanguage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYLanguage.bundle; sourceTree = "<group>"; };
 		8377332D26D659040087ED18 /* pushCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pushCenter.framework; sourceTree = "<group>"; };
+		83FB3B472704483800D47E53 /* share.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = share.bundle; sourceTree = "<group>"; };
+		83FB3B482704483800D47E53 /* shareCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = shareCenter.framework; sourceTree = "<group>"; };
+		83FB3B4E2704522900D47E53 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NIMSDK.framework; sourceTree = "<group>"; };
+		83FB3B4F2704522900D47E53 /* QYSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QYSDK.framework; sourceTree = "<group>"; };
+		83FB3B562704541400D47E53 /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +93,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FB3B4B27044FC500D47E53 /* shareCenter.framework in Frameworks */,
 				8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */,
-				8377332926D658C00087ED18 /* NIMSDK.framework in Frameworks */,
-				539E11EF2552C0FA00CA8CF5 /* shareGroup.framework in Frameworks */,
+				83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */,
+				83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */,
 				539E11EB2552C0F700CA8CF5 /* advertisingCenter.framework in Frameworks */,
-				8377332B26D658C30087ED18 /* QYSDK.framework in Frameworks */,
 				5399F48624875229005BC2B3 /* loginSDK.framework in Frameworks */,
 				539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */,
 			);
@@ -122,16 +126,17 @@
 			isa = PBXGroup;
 			children = (
 				5399F498248758FD005BC2B3 /* demo.entitlements */,
+				83FB3B472704483800D47E53 /* share.bundle */,
+				83FB3B482704483800D47E53 /* shareCenter.framework */,
 				8377332D26D659040087ED18 /* pushCenter.framework */,
-				8377331F26D658B80087ED18 /* NIMSDK.framework */,
 				8377332026D658B80087ED18 /* QYCustomResource.bundle */,
 				8377332326D658B80087ED18 /* QYLanguage.bundle */,
 				8377332126D658B80087ED18 /* QYResource.bundle */,
-				8377332226D658B80087ED18 /* QYSDK.framework */,
 				539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */,
 				539E11E72552C0EE00CA8CF5 /* serverPush.framework */,
-				539E11E62552C0EE00CA8CF5 /* shareGroup.framework */,
 				5399F484248751CD005BC2B3 /* loginSDK.framework */,
+				83FB3B4E2704522900D47E53 /* NIMSDK.framework */,
+				83FB3B4F2704522900D47E53 /* QYSDK.framework */,
 				5399F47C24874A20005BC2B3 /* baidumobadsdk.bundle */,
 				5399F47F24874A20005BC2B3 /* BUAdSDK.bundle */,
 				5399F47D24874A20005BC2B3 /* login.bundle */,
@@ -142,6 +147,7 @@
 				5399F46224874783005BC2B3 /* ViewController.m */,
 				5399F46424874783005BC2B3 /* Main.storyboard */,
 				5399F46724874786005BC2B3 /* Assets.xcassets */,
+				83FB3B562704541400D47E53 /* test1.jpeg */,
 				5399F46924874786005BC2B3 /* LaunchScreen.storyboard */,
 				5399F46C24874786005BC2B3 /* Info.plist */,
 				5399F46D24874786005BC2B3 /* main.m */,
@@ -160,6 +166,7 @@
 				5399F45524874783005BC2B3 /* Frameworks */,
 				5399F45624874783005BC2B3 /* Resources */,
 				5399F48824875229005BC2B3 /* Embed Frameworks */,
+				83FB3B4D2704510700D47E53 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -217,10 +224,32 @@
 				5399F48324874A20005BC2B3 /* BUAdSDK.bundle in Resources */,
 				5399F46624874783005BC2B3 /* Main.storyboard in Resources */,
 				5399F48224874A20005BC2B3 /* WeiboSDK.bundle in Resources */,
+				83FB3B492704483800D47E53 /* share.bundle in Resources */,
+				83FB3B572704541400D47E53 /* test1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83FB3B4D2704510700D47E53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5399F45424874783005BC2B3 /* Sources */ = {
@@ -392,6 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -420,6 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
