@@ -62,6 +62,14 @@
 
 @property (nonatomic) int vip_level;
 
+@property (nonatomic, copy) NSString *sex;//性别
+
+@property (nonatomic, copy) NSString *birthday;//生日
+
+@property (nonatomic, copy) NSString *intro;//简介
+
+@property (nonatomic, copy) NSString *social_name;//昵称
+
 /**
  UserInfo转NSDictionary
  

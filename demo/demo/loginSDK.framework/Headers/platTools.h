@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UserNotifications/UserNotifications.h>
+#if __has_include("shareCenter/sharePlatform.h")
+#import <shareCenter/sharePlatform.h>
+#endif
 NS_ASSUME_NONNULL_BEGIN
 
 @interface platTools : NSObject
@@ -24,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param serverID 区服
  @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级
  @param vipLevel 游戏VIP等级
+ @param zone 大区id
  */
  
 
@@ -32,7 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
              serverID:(NSString *)serverID
                roleID:(NSString *)roleID
                status:(NSString *)status
-            vipLevel:(NSString *)vipLevel;
+            vipLevel:(NSString *)vipLevel
+                zone:(NSString *)zone;
 
 /**
  获取语言包中的多语言
@@ -109,6 +114,15 @@ NS_ASSUME_NONNULL_BEGIN
  @param param 事件参数
 */
 + (void)logTracking:(NSDictionary *)param;
+
+/**
+ 分享方法---此方法只在包含分享的sdk版本可用，请注意
+ @param item     分享的对象
+ result 分享结果回调
+*/
+#if __has_include("shareCenter/sharePlatform.h")
++ (void)shareItem:(shareContentItem *)item shareResult:(ShareResultlBlock)result;
+#endif
 
 @end
 

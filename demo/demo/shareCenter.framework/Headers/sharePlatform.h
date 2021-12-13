@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger , statusCode) {
 };
 
 @interface sharePlatform : NSObject
-
++ (void)setDebug;
 +(sharePlatform *)getInit;
 /*用户行为*/
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity;

@@ -69,7 +69,7 @@
      }
      else if(indexPath.row==3){
      
-         [platTools platRoleName:@"名字" gameLevel:@"等级" serverID:@"区服ID" roleID:@"游戏角色ID" status:@"类型" vipLevel:@"vip等级"];
+         [platTools platRoleName:@"名字" gameLevel:@"等级" serverID:@"区服ID" roleID:@"游戏角色ID" status:@"类型" vipLevel:@"vip等级" zone:@"大区"];
      }
      else if(indexPath.row==4){
          [sharePlatform shareWithContent:item  shareType:ShareTypeQQ shareResult:^(NSInteger shareResult) {
@@ -129,6 +129,7 @@
          
      }
      else if(indexPath.row==10){
+         //方法一：直接调用ShareCenter.framework的分享方法，使用此方法，一定要初始化分享SDK
          [sharePlatform shareWithContent:item shareResult:^(NSInteger shareResult) {
              if(shareResult ==statusCodeSuccess){
                                       NSLog(@"分享成功");
@@ -136,6 +137,17 @@
                                       NSLog(@"分享失败");
                                   }
          }];
+         
+         //v3.9.4包含分享的SDK可以这么使用分享，详见接入文档。（不包含分享的sdk，请按照方法一接入）
+         //方法二：
+         [platTools shareItem:item shareResult:^(NSInteger shareResult) {
+             if(shareResult ==statusCodeSuccess){
+                                      NSLog(@"分享成功");
+                                  }else if (shareResult ==statusCodeCancel){
+                                      NSLog(@"分享失败");
+                                  }
+         }];
+         
      }else if(indexPath.row ==11){
          [adPlatform pullAdvertisingReward];
           
