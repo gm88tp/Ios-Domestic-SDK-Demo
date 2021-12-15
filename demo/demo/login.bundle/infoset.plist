@@ -7,7 +7,7 @@
 	<key>requestUrl</key>
 	<string></string>
 	<key>sdkversion</key>
-	<string>3.9.3</string>
+	<string>3.9.4</string>
 	<key>appversion</key>
 	<string>1.0</string>
 	<key>sdkinfo</key>
@@ -15,18 +15,22 @@
 	<key>appleId</key>
 	<string>1556383376</string>
 	<key>version</key>
-	<string>1.2.3</string>
+	<string>1.8</string>
 	<key>channel</key>
 	<string>2</string>
 	<key>gameid</key>
-	<string>4817</string>
+	<string>4875</string>
 	<key>trackIoKey</key>
 	<string>6e4444b67f30314e699f983c197f21a6</string>
 	<key>kfkey</key>
 	<string>23b744c7f4a4b0688866f1d50facdae8</string>
 	<key>TAAppId</key>
-	<string>06842647fb7c48e794aafa3d6d3fc7d9</string>
+	<string>3b0be931049d4640a9e94e6fac141ddb</string>
 	<key>TAUrl</key>
-	<string>https://receiver.ta.thinkingdata.cn</string>
+	<string>https://tareport.gm88.com</string>
+	<key>releaseid</key>
+	<string>0</string>
+	<key>sanyanAppid</key>
+	<string>e6c0ef437dfb</string>
 </dict>
 </plist>

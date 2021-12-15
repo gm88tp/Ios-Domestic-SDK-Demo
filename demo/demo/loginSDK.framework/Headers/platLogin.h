@@ -95,6 +95,9 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (NSString *)antiaddictionInfo;
 
+//显示用户中心
++ (void)usercenter;
+
 @end
 
 NS_ASSUME_NONNULL_END
