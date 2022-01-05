@@ -13,6 +13,10 @@
 #endif
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger , agreementStatusCode) {
+    agreementStatusCodeAgree=0,
+    agreementStatusCodeUNAgree=1
+};
 @interface platTools : NSObject
 /**
  获取当前 SDK 的版本号
@@ -96,7 +100,13 @@ NS_ASSUME_NONNULL_BEGIN
  唤起页面
  @param info 链接地址
 */
-+ (void)agreement:(NSString * )info;
++ (void)showInfo:(NSString * )info;
+
+/**
+ 唤起协议页面
+ @param info 链接地址
+*/
++ (void)agreementWithResult:(void(^)(agreementStatusCode code))result;
 
 //查询和谐配置的
 + (void)SysSetting:(void(^)(NSDictionary *info))Success;

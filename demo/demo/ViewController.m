@@ -33,7 +33,7 @@
     [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"多渠道分享",@"广告",@"剩余时长",@"用户年龄",@"通知授权"
+    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"多渠道分享",@"广告",@"剩余时长",@"用户年龄",@"通知授权",@"用户中心",@"协议"
     ];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(notificationFunc:) name:notificationName   object:nil];
 }
@@ -165,6 +165,16 @@
                   NSLog(@"允许");
               } else if (result == 2) {
                   NSLog(@"不允许");
+              }
+          }];
+      } else if (indexPath.row == 15) {
+          [platLogin usercenter];
+      } else if (indexPath.row == 16) {
+          [platTools agreementWithResult:^(agreementStatusCode code) {
+              if (code == agreementStatusCodeAgree) {
+                  NSLog(@"用户同意协议");
+              } else {
+                  NSLog(@"用户不同意协议");
               }
           }];
       }

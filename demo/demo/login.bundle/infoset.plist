@@ -7,7 +7,7 @@
 	<key>requestUrl</key>
 	<string></string>
 	<key>sdkversion</key>
-	<string>3.9.4</string>
+	<string>3.9.5</string>
 	<key>appversion</key>
 	<string>1.0</string>
 	<key>sdkinfo</key>
@@ -30,5 +30,11 @@
 	<string>https://tareport.gm88.com</string>
 	<key>releaseid</key>
 	<string>0</string>
+	<key>SYAppid</key>
+	<string>e6c0ef437dfb</string>
+	<key>wechatAppid</key>
+	<string>wx2baa06ccaffc3b0b</string>
+	<key>wechatlink</key>
+	<string>https://xxxx</string>
 </dict>
 </plist>
