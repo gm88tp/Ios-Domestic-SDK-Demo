@@ -28,9 +28,6 @@
 		8377332826D658B80087ED18 /* QYLanguage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332326D658B80087ED18 /* QYLanguage.bundle */; };
 		8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; };
 		8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83FB3B492704483800D47E53 /* share.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83FB3B472704483800D47E53 /* share.bundle */; };
-		83FB3B4B27044FC500D47E53 /* shareCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B482704483800D47E53 /* shareCenter.framework */; };
-		83FB3B4C27044FC500D47E53 /* shareCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B482704483800D47E53 /* shareCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; };
 		83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4F2704522900D47E53 /* QYSDK.framework */; };
@@ -46,7 +43,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */,
-				83FB3B4C27044FC500D47E53 /* shareCenter.framework in Embed Frameworks */,
 				8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */,
 				83FB3B552704523100D47E53 /* QYSDK.framework in Embed Frameworks */,
 				539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */,
@@ -81,8 +77,6 @@
 		8377332126D658B80087ED18 /* QYResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYResource.bundle; sourceTree = "<group>"; };
 		8377332326D658B80087ED18 /* QYLanguage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYLanguage.bundle; sourceTree = "<group>"; };
 		8377332D26D659040087ED18 /* pushCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pushCenter.framework; sourceTree = "<group>"; };
-		83FB3B472704483800D47E53 /* share.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = share.bundle; sourceTree = "<group>"; };
-		83FB3B482704483800D47E53 /* shareCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = shareCenter.framework; sourceTree = "<group>"; };
 		83FB3B4E2704522900D47E53 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NIMSDK.framework; sourceTree = "<group>"; };
 		83FB3B4F2704522900D47E53 /* QYSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QYSDK.framework; sourceTree = "<group>"; };
 		83FB3B562704541400D47E53 /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
@@ -93,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83FB3B4B27044FC500D47E53 /* shareCenter.framework in Frameworks */,
 				8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */,
 				83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */,
 				83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */,
@@ -126,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				5399F498248758FD005BC2B3 /* demo.entitlements */,
-				83FB3B472704483800D47E53 /* share.bundle */,
-				83FB3B482704483800D47E53 /* shareCenter.framework */,
 				8377332D26D659040087ED18 /* pushCenter.framework */,
 				8377332026D658B80087ED18 /* QYCustomResource.bundle */,
 				8377332326D658B80087ED18 /* QYLanguage.bundle */,
@@ -224,7 +215,6 @@
 				5399F48324874A20005BC2B3 /* BUAdSDK.bundle in Resources */,
 				5399F46624874783005BC2B3 /* Main.storyboard in Resources */,
 				5399F48224874A20005BC2B3 /* WeiboSDK.bundle in Resources */,
-				83FB3B492704483800D47E53 /* share.bundle in Resources */,
 				83FB3B572704541400D47E53 /* test1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +394,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ABKWKW7Y7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gm.GMDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qmxb.shgm.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,7 +423,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ABKWKW7Y7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gm.GMDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qmxb.shgm.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

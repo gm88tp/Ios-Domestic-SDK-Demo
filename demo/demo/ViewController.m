@@ -13,8 +13,8 @@
 #import <loginSDK/platPurchase.h>
 #import <loginSDK/purchaseModel.h>
 #import "loginSDK/platTools.h"
-#import "shareCenter/sharePlatform.h"
-#import "shareCenter/shareContentItem.h"
+#import "loginSDK/sharePlatform.h"
+#import "loginSDK/shareContentItem.h"
 #import "advertisingCenter/adPlatform.h"
 #import <pushCenter/pushPlat.h>
 

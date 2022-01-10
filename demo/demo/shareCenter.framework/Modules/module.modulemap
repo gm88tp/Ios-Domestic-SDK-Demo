@@ -1,6 +1,0 @@
-framework module shareCenter {
-  umbrella header "shareCenter.h"
-
-  export *
-  module * { export * }
-}

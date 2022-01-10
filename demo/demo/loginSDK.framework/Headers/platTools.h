@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UserNotifications/UserNotifications.h>
-#if __has_include("shareCenter/sharePlatform.h")
-#import <shareCenter/sharePlatform.h>
-#endif
+//#if __has_include("shareCenter/sharePlatform.h")
+//#import <shareCenter/sharePlatform.h>
+//#endif
+#import "sharePlatform.h"
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger , agreementStatusCode) {
@@ -130,9 +131,9 @@ typedef NS_ENUM(NSInteger , agreementStatusCode) {
  @param item     分享的对象
  result 分享结果回调
 */
-#if __has_include("shareCenter/sharePlatform.h")
+//#if __has_include("shareCenter/sharePlatform.h")
 + (void)shareItem:(shareContentItem *)item shareResult:(ShareResultlBlock)result;
-#endif
+//#endif
 
 @end
 
