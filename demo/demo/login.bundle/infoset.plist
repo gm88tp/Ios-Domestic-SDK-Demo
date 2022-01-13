@@ -35,16 +35,16 @@
 	<key>wechatAppid</key>
 	<string>wx2baa06ccaffc3b0b</string>
 	<key>wechatlink</key>
-	<string>https://qmxb.gm88.com/apple-app-association/</string>
-    <key>wbAppkey</key>
-    <string>4225951394</string>
-    <key>wbLink</key>
-    <string>https://demo.gm88.com/app1/</string>
-    <key>qqAppid</key>
-    <string>101949077</string>
-    <key>qqLink</key>
-    <string>https://demo.gm88.com/qq_conn/101949077</string>
-    <key>douyinClientKey</key>
-    <string>awmms3veimohgix8</string>
+	<string>https://......</string>
+	<key>wbAppkey</key>
+	<string>4225951394</string>
+	<key>wbLink</key>
+	<string>https://.....</string>
+	<key>qqAppid</key>
+	<string>101949077</string>
+	<key>qqLink</key>
+	<string>https://......</string>
+	<key>douyinClientKey</key>
+	<string>awmms3veimohgix8</string>
 </dict>
 </plist>
