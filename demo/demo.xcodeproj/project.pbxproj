@@ -23,15 +23,9 @@
 		539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; };
 		539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 539E11E72552C0EE00CA8CF5 /* serverPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8377332526D658B80087ED18 /* QYCustomResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332026D658B80087ED18 /* QYCustomResource.bundle */; };
-		8377332626D658B80087ED18 /* QYResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332126D658B80087ED18 /* QYResource.bundle */; };
-		8377332826D658B80087ED18 /* QYLanguage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8377332326D658B80087ED18 /* QYLanguage.bundle */; };
 		8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; };
 		8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8377332D26D659040087ED18 /* pushCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; };
-		83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4E2704522900D47E53 /* NIMSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4F2704522900D47E53 /* QYSDK.framework */; };
-		83FB3B552704523100D47E53 /* QYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB3B4F2704522900D47E53 /* QYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83A14FB927BA00B00009BFE4 /* AIHelpSupportSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FB827BA00B00009BFE4 /* AIHelpSupportSDK.bundle */; };
 		83FB3B572704541400D47E53 /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 83FB3B562704541400D47E53 /* test1.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				83FB3B532704523000D47E53 /* NIMSDK.framework in Embed Frameworks */,
 				8377333026D659090087ED18 /* pushCenter.framework in Embed Frameworks */,
-				83FB3B552704523100D47E53 /* QYSDK.framework in Embed Frameworks */,
 				539E11EC2552C0F700CA8CF5 /* advertisingCenter.framework in Embed Frameworks */,
 				5399F48724875229005BC2B3 /* loginSDK.framework in Embed Frameworks */,
 				539E11EE2552C0F800CA8CF5 /* serverPush.framework in Embed Frameworks */,
@@ -73,12 +65,8 @@
 		5399F498248758FD005BC2B3 /* demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demo.entitlements; sourceTree = "<group>"; };
 		539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = advertisingCenter.framework; sourceTree = "<group>"; };
 		539E11E72552C0EE00CA8CF5 /* serverPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = serverPush.framework; sourceTree = "<group>"; };
-		8377332026D658B80087ED18 /* QYCustomResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYCustomResource.bundle; sourceTree = "<group>"; };
-		8377332126D658B80087ED18 /* QYResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYResource.bundle; sourceTree = "<group>"; };
-		8377332326D658B80087ED18 /* QYLanguage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYLanguage.bundle; sourceTree = "<group>"; };
 		8377332D26D659040087ED18 /* pushCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pushCenter.framework; sourceTree = "<group>"; };
-		83FB3B4E2704522900D47E53 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NIMSDK.framework; sourceTree = "<group>"; };
-		83FB3B4F2704522900D47E53 /* QYSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QYSDK.framework; sourceTree = "<group>"; };
+		83A14FB827BA00B00009BFE4 /* AIHelpSupportSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AIHelpSupportSDK.bundle; sourceTree = "<group>"; };
 		83FB3B562704541400D47E53 /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8377332F26D659090087ED18 /* pushCenter.framework in Frameworks */,
-				83FB3B522704522F00D47E53 /* NIMSDK.framework in Frameworks */,
-				83FB3B542704523100D47E53 /* QYSDK.framework in Frameworks */,
 				539E11EB2552C0F700CA8CF5 /* advertisingCenter.framework in Frameworks */,
 				5399F48624875229005BC2B3 /* loginSDK.framework in Frameworks */,
 				539E11ED2552C0F800CA8CF5 /* serverPush.framework in Frameworks */,
@@ -119,29 +105,25 @@
 			isa = PBXGroup;
 			children = (
 				5399F498248758FD005BC2B3 /* demo.entitlements */,
-				8377332D26D659040087ED18 /* pushCenter.framework */,
-				8377332026D658B80087ED18 /* QYCustomResource.bundle */,
-				8377332326D658B80087ED18 /* QYLanguage.bundle */,
-				8377332126D658B80087ED18 /* QYResource.bundle */,
-				539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */,
-				539E11E72552C0EE00CA8CF5 /* serverPush.framework */,
-				5399F484248751CD005BC2B3 /* loginSDK.framework */,
-				83FB3B4E2704522900D47E53 /* NIMSDK.framework */,
-				83FB3B4F2704522900D47E53 /* QYSDK.framework */,
+				83A14FB827BA00B00009BFE4 /* AIHelpSupportSDK.bundle */,
 				5399F47C24874A20005BC2B3 /* baidumobadsdk.bundle */,
 				5399F47F24874A20005BC2B3 /* BUAdSDK.bundle */,
 				5399F47D24874A20005BC2B3 /* login.bundle */,
 				5399F47E24874A20005BC2B3 /* WeiboSDK.bundle */,
+				539E11E52552C0EE00CA8CF5 /* advertisingCenter.framework */,
+				5399F484248751CD005BC2B3 /* loginSDK.framework */,
+				8377332D26D659040087ED18 /* pushCenter.framework */,
+				539E11E72552C0EE00CA8CF5 /* serverPush.framework */,
 				5399F45B24874783005BC2B3 /* AppDelegate.h */,
 				5399F45C24874783005BC2B3 /* AppDelegate.m */,
 				5399F46124874783005BC2B3 /* ViewController.h */,
 				5399F46224874783005BC2B3 /* ViewController.m */,
-				5399F46424874783005BC2B3 /* Main.storyboard */,
-				5399F46724874786005BC2B3 /* Assets.xcassets */,
 				83FB3B562704541400D47E53 /* test1.jpeg */,
-				5399F46924874786005BC2B3 /* LaunchScreen.storyboard */,
-				5399F46C24874786005BC2B3 /* Info.plist */,
 				5399F46D24874786005BC2B3 /* main.m */,
+				5399F46C24874786005BC2B3 /* Info.plist */,
+				5399F46724874786005BC2B3 /* Assets.xcassets */,
+				5399F46924874786005BC2B3 /* LaunchScreen.storyboard */,
+				5399F46424874783005BC2B3 /* Main.storyboard */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -206,14 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5399F46B24874786005BC2B3 /* LaunchScreen.storyboard in Resources */,
-				8377332626D658B80087ED18 /* QYResource.bundle in Resources */,
 				5399F46824874786005BC2B3 /* Assets.xcassets in Resources */,
 				5399F48124874A20005BC2B3 /* login.bundle in Resources */,
 				5399F48024874A20005BC2B3 /* baidumobadsdk.bundle in Resources */,
-				8377332826D658B80087ED18 /* QYLanguage.bundle in Resources */,
-				8377332526D658B80087ED18 /* QYCustomResource.bundle in Resources */,
 				5399F48324874A20005BC2B3 /* BUAdSDK.bundle in Resources */,
 				5399F46624874783005BC2B3 /* Main.storyboard in Resources */,
+				83A14FB927BA00B00009BFE4 /* AIHelpSupportSDK.bundle in Resources */,
 				5399F48224874A20005BC2B3 /* WeiboSDK.bundle in Resources */,
 				83FB3B572704541400D47E53 /* test1.jpeg in Resources */,
 			);

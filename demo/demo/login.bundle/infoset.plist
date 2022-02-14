@@ -7,7 +7,7 @@
 	<key>requestUrl</key>
 	<string></string>
 	<key>sdkversion</key>
-	<string>3.9.5</string>
+	<string>3.9.6</string>
 	<key>appversion</key>
 	<string>1.0</string>
 	<key>sdkinfo</key>
@@ -19,11 +19,9 @@
 	<key>channel</key>
 	<string>2</string>
 	<key>gameid</key>
-	<string>4600</string>
+	<string>4817</string>
 	<key>trackIoKey</key>
 	<string>6e4444b67f30314e699f983c197f21a6</string>
-	<key>kfkey</key>
-	<string>23b744c7f4a4b0688866f1d50facdae8</string>
 	<key>TAAppId</key>
 	<string>3b0be931049d4640a9e94e6fac141ddb</string>
 	<key>TAUrl</key>
@@ -32,19 +30,21 @@
 	<string>0</string>
 	<key>SYAppid</key>
 	<string>e6c0ef437dfb</string>
+	<key>kfkey</key>
+	<string></string>
 	<key>wechatAppid</key>
-	<string>wxcde15e4db5f1d296</string>
+	<string></string>
 	<key>wechatlink</key>
-	<string>https://......</string>
+	<string></string>
 	<key>wbAppkey</key>
-	<string>4225951394</string>
+	<string>42......</string>
 	<key>wbLink</key>
-	<string>https://.....</string>
-	<key>qqAppid</key>
-	<string>101949077</string>
-	<key>qqLink</key>
 	<string>https://......</string>
+	<key>qqAppid</key>
+	<string>10....</string>
+	<key>qqLink</key>
+	<string>https://.......</string>
 	<key>douyinClientKey</key>
-	<string>awmms3veimohgix8</string>
+	<string>aw......</string>
 </dict>
 </plist>
