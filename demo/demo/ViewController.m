@@ -33,7 +33,7 @@
     [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"多渠道分享",@"广告",@"剩余时长",@"用户年龄",@"通知授权",@"用户中心",@"协议"
+    self.arr = @[@"登录",@"支付",@"退出",@"角色打点",@"qq",@"空间",@"微博",@"微信好友",@"微信朋友圈",@"微信喜欢",@"多渠道分享",@"广告",@"剩余时长",@"用户年龄",@"通知授权",@"用户中心",@"协议",@"删除账号"
     ];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(notificationFunc:) name:notificationName   object:nil];
 }
@@ -177,6 +177,8 @@
                   NSLog(@"用户不同意协议");
               }
           }];
+      } else if (indexPath.row == 17) {
+          [platLogin deleteAccount];
       }
  }
 

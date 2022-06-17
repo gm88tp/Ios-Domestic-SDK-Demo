@@ -13,6 +13,10 @@ SDK放在SDK文件夹内
 
 ## 更新日志
 
+2022.06.17 V3.9.7
+
+新增删除账号
+
 2022.02.11 V3.9.6
 
 1、新增苹果登录
@@ -372,6 +376,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 ```objectivec
 [platLogin LoginStaus];
+```
+
+#### 删除账号
+
+此方法用于删除账号
+
+**方法**
+
+```objectivec
+//删除账号
++ (void)deleteAccount;
+```
+
+**示例**
+
+```objectivec
+[platLogin deleteAccount];
 ```
 
 #### 实名认证

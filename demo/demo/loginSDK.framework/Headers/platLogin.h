@@ -98,6 +98,9 @@ NS_ASSUME_NONNULL_BEGIN
 //显示用户中心
 + (void)usercenter;
 
+//删除账号
++ (void)deleteAccount;
+
 @end
 
 NS_ASSUME_NONNULL_END
