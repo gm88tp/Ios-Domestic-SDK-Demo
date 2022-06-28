@@ -5,9 +5,9 @@
 	<key>sdkkf</key>
 	<string>https://m.dre1e.com/kefu/?from=ios</string>
 	<key>requestUrl</key>
-	<string></string>
+	<string>https://m.dre1e.com</string>
 	<key>sdkversion</key>
-	<string>3.9.6</string>
+	<string>3.9.7</string>
 	<key>appversion</key>
 	<string>1.0</string>
 	<key>sdkinfo</key>
@@ -19,7 +19,7 @@
 	<key>channel</key>
 	<string>2</string>
 	<key>gameid</key>
-	<string>4817</string>
+	<string>4875</string>
 	<key>trackIoKey</key>
 	<string>6e4444b67f30314e699f983c197f21a6</string>
 	<key>TAAppId</key>
@@ -37,14 +37,14 @@
 	<key>wechatlink</key>
 	<string></string>
 	<key>wbAppkey</key>
-	<string>42......</string>
+	<string>4225951394</string>
 	<key>wbLink</key>
-	<string>https://......</string>
+	<string>https://xxxxxx/xxx</string>
 	<key>qqAppid</key>
-	<string>10....</string>
+	<string>101949077</string>
 	<key>qqLink</key>
-	<string>https://.......</string>
+	<string>https://xxxxx/xxxx</string>
 	<key>douyinClientKey</key>
-	<string>aw......</string>
+	<string>awmms3veimohgix8</string>
 </dict>
 </plist>
