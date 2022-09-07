@@ -7,7 +7,7 @@
 	<key>requestUrl</key>
 	<string>https://m.dre1e.com</string>
 	<key>sdkversion</key>
-	<string>3.9.7</string>
+	<string>3.9.8</string>
 	<key>appversion</key>
 	<string>1.0</string>
 	<key>sdkinfo</key>
@@ -15,11 +15,11 @@
 	<key>appleId</key>
 	<string>1556383376</string>
 	<key>version</key>
-	<string>1.8</string>
+	<string>1.3.8</string>
 	<key>channel</key>
 	<string>2</string>
 	<key>gameid</key>
-	<string>4875</string>
+	<string>1156</string>
 	<key>trackIoKey</key>
 	<string>6e4444b67f30314e699f983c197f21a6</string>
 	<key>TAAppId</key>
@@ -39,12 +39,14 @@
 	<key>wbAppkey</key>
 	<string>4225951394</string>
 	<key>wbLink</key>
-	<string>https://xxxxxx/xxx</string>
+	<string>https://xxxx</string>
 	<key>qqAppid</key>
 	<string>101949077</string>
 	<key>qqLink</key>
-	<string>https://xxxxx/xxxx</string>
+	<string>https://xxxx</string>
 	<key>douyinClientKey</key>
 	<string>awmms3veimohgix8</string>
+	<key>startNotice</key>
+	<string>1</string>
 </dict>
 </plist>

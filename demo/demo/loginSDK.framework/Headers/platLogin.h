@@ -59,6 +59,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*) getToken;
 
 /**
+ 获取 accessToken
+ 
+ */
++ ( void)accessToken:(void(^)( NSDictionary * info))success;
+
+/**
  SDK切换账号方法
  */
 + (void)logSwitch;
@@ -75,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  status 0 未实名 1实名 2查询失败
 */
 +(void)checkRealName:(void(^)(int status))success;
-
++(void)realNameView;
 
 /**
  唤起实名页面的
@@ -100,6 +106,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 //删除账号
 + (void)deleteAccount;
+
+
+//phonebing
+
++(void)checkPhoneNumber:(void(^)(int status))success;
++(void)phoneBindView;
+
+
+/*
+  手机绑定 实名认证 使用一个通知
+ 通知名：GameID
+ 返回参数：status  0 手机绑定失败
+                 1 手机绑定成功
+                 2 实名认证失败
+                 3 实名认证成功
+                 4 当前无新消息
+                 5 当前有新消息
+            
+ */
 
 @end
 

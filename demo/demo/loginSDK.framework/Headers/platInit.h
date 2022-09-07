@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
  
- 
-@interface platInit : NSObject
+@interface platInit : NSObject<UNUserNotificationCenterDelegate>
 
 
 /*!
@@ -98,8 +99,13 @@
 
 
 
++ (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken  ;
 
++ (void)receiveRemoteNotifications:(NSDictionary *)dic;
 
++ (void)requestAuthorizationForRemoteNotifications:(void(^)(NSInteger result))callback;
+
++ (void)applicationIconBadgeClear;
 @end
 
 

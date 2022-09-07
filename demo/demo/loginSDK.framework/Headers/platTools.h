@@ -11,7 +11,7 @@
 //#if __has_include("shareCenter/sharePlatform.h")
 //#import <shareCenter/sharePlatform.h>
 //#endif
-#import "sharePlatform.h"
+ 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger , agreementStatusCode) {
@@ -44,10 +44,7 @@ typedef NS_ENUM(NSInteger , agreementStatusCode) {
             vipLevel:(NSString *)vipLevel
                 zone:(NSString *)zone;
 
-/**
- 获取语言包中的多语言
- */
-+ (NSString *)setlaugulgString:(NSString *)str;
+ 
 
 /**
  获取资源包中的配置参数
@@ -70,7 +67,7 @@ typedef NS_ENUM(NSInteger , agreementStatusCode) {
 + (void)removeLoadingImg;
 
  
-
++ (void)evaluate;
  
 
 /**
@@ -105,36 +102,32 @@ typedef NS_ENUM(NSInteger , agreementStatusCode) {
 
 /**
  唤起协议页面
- @param info 链接地址
+ @param  链接地址
 */
 + (void)agreementWithResult:(void(^)(agreementStatusCode code))result;
 
 //查询和谐配置的
-+ (void)SysSetting:(void(^)(NSDictionary *info))Success;
+ 
 
 
 
-/**
- 打点上报接口---SDK后台
- @param str 事件名称
-*/
-+(void)log:(NSString*)str;
+ 
+ 
 
-/**
- 打点上报接口---tracking
- @param param 事件参数
-*/
-+ (void)logTracking:(NSDictionary *)param;
+ 
 
-/**
- 分享方法---此方法只在包含分享的sdk版本可用，请注意
- @param item     分享的对象
- result 分享结果回调
-*/
-//#if __has_include("shareCenter/sharePlatform.h")
-+ (void)shareItem:(shareContentItem *)item shareResult:(ShareResultlBlock)result;
-//#endif
+//客服
++ (void)custom;
 
+//NSDictionary类型转json格式方法
++ (NSString *)jsonStringWithDictionary:(NSDictionary *)dic;
+
+//json格式转成字典类型方法
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
+
+
++ (void)showWith:(NSString *)str;
 @end
 
 NS_ASSUME_NONNULL_END
